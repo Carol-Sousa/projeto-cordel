@@ -1,0 +1,94 @@
+@charset "UTF-8";
+
+  @import url('https://fonts.googleapis.com/css2?family=Passion+One&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Sriracha&display=swap'); /*FONTES IMPORTADAS DO GOOGLE FONTS*/ 
+
+
+  :root {
+    --fonte1: Verdana, Geneva, Tahoma, sans-serif;
+    --fonte2: 'Passion One', sans-serif;
+    --fonte3: 'Sriracha', cursive;  /*peguei do google fonts*/
+  }  /*short hand para as fontes*/
+
+  * {  /*CONFIGURAÇÃO GERAL/ tudo coladinho na pagina*/
+    margin: 0px; 
+    padding: 0px;
+}
+
+
+html, body {
+    background-color: darkgrey;
+    min-height: 100vh; /*TAMANHO MINIMO DO CONTEUDO ocupando 100 da ALTURA view port*/ /*VW= ALTURA/ VH= LARGURA*/
+    font-family: var(--fonte1);
+}
+header {
+    background-color: black;
+    color: white;
+    text-align: center; /*CENTRALIZADO*/
+}
+header>h1 {
+    padding-top: 50px; /*DISTANCIA BORDA superior (top)>CONTEUDO*/
+     font-variant: small-caps; /*TODAS AS LETRAS MAIUSCULAS, POREM AS PRIMEIRAS DE CADA PALAVRA MAIORES QUE AS DEMAIS*/
+     font-family: var(--fonte2);
+     font-size: 10vw; /*mudando a medida para vw, a letra tem referencia da argura da tela, aumenta quando a tela aumenta e diminui, alem de centralzar, NÃO É A MELHOR OPÇÃO, MAS É OQ TEM NO MOMENTO (LOGO, APRENDO OUTRA)*/
+}
+header>p {
+    padding-bottom: 50PX;
+}
+a {
+    color: white;
+    text-decoration: none;
+    font-weight: bolder; /*NEGRITO*/
+}
+a:hover {
+    text-decoration: underline;
+}
+section /*ESSAS CONF. SERVEM PRAS DUAS SECTIONS (NORMAL E IMAGEM*/ {
+    padding-top: 10vh;
+    padding-bottom: 10vh; /*ALTURA PARA EU CONFIGURAR O EFEITO*/
+    line-height: 2em; /*ESPAÇAMENTO DUPLO DAS LINHAS*/
+    padding-left: 40px;  /*AFASTEI TEXTO DA BORDA LATERAL*/
+    font-family: var(--fonte3);
+    font-size: 3.5vw;
+}
+
+section > p {
+    padding-bottom: 2em;
+}
+section.normal {
+    background-color: white;
+    color: black;
+
+}
+
+section.imagem { background-color: rgb(206, 56, 101);
+    color: white;
+    box-shadow: inset 7px 7px 15px 0px rgba(0, 0, 0, 0.678); /*sombra interna na imagem*/
+    background-attachment: fixed; /*EFEITO PARALAX*/
+}
+
+section.imagem>p { /*PARAGRAFO QE TA DENTRO DA SECTION IMAGEM VAI TER UMA 'CAIXA' PRETA, pra não confundir a letra na imagem*/
+   display: inline-block; /*A CAIXA SE ADAPTA AO CONTEUDO*/ 
+   padding: 6px; /*SO PRA NAO FICAR COLADO NO TEXTO*/
+    background-color: rgba(0, 0, 0, 0.377);
+    text-shadow: 1.5px 1.5px 0px black ; /*SOMBRA DA LETRA*/
+    
+}
+section#img01 {
+    background-image: url(imagens/background001.jpg);
+    background-position: right center;
+    background-size: cover; /*REVISAR OQ É!!!!!!!*/
+}
+section#img02 {
+background-image: url(imagens/background002.jpg);
+background-size: cover;
+}
+
+
+
+footer {
+    background-color: black;
+    text-align: center;
+    color: white;
+    padding: 8px;
+}
